@@ -1,9 +1,13 @@
 // Importando o express
 const express = require('express')
+const cors = require('cors') // Importando o pacote cors
 const app = express()
 
 // Definindo a porta do servidor
 const PORT = process.env.PORT || 3000
+
+// Usando o middleware cors para permitir requisições de qualquer origem
+app.use(cors())
 
 // Dados dos empregados (o arquivo JSON que você forneceu)
 const employees = [
